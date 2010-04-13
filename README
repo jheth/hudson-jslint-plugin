@@ -1,0 +1,4 @@
+This is my first attempt at a Hudson plugin. Using the analysis-core as a base 
+I'm trying to create a CheckStyle or PMD style project.  Using the jslint4java
+project (http://code.google.com/p/jslint4java/) you can generate a jslint.xml file
+with issues found during static analysis. 
