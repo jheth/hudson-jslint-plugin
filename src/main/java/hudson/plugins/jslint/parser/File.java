@@ -8,11 +8,13 @@ import java.util.List;
 /**
  * Java Bean class for a file of the JsLint format.
  *
- * @author Ulli Hafner
+ * @author Joe Heth
  */
 public class File {
+
     /** Name of the file. */
     private String name;
+
     /** All errors of this file. */
     private final List<Error> errors = new ArrayList<Error>();
 

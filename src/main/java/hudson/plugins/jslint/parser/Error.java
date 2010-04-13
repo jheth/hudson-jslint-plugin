@@ -3,9 +3,10 @@ package hudson.plugins.jslint.parser;
 /**
  * Java Bean class for a violation of the JsLint format.
  *
- * @author Ulli Hafner
+ * @author Joe Heth
  */
 public class Error {
+
 // CHECKSTYLE:OFF
     /** Source of warning. */
     private String source;

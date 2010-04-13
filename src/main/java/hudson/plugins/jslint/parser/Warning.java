@@ -12,11 +12,10 @@ import org.apache.commons.lang.StringUtils;
  * Note: this class has a natural ordering that is inconsistent with equals.
  * </p>
  *
- * @author Ulli Hafner
+ * @author Joe Heth
  */
 public class Warning extends AbstractAnnotation {
-    /** Unique identifier of this class. */
-    private static final long serialVersionUID = 5171661552905752370L;
+
     /** Origin of the annotation. */
     public static final String ORIGIN = "jslint";
 

@@ -18,16 +18,17 @@ import org.kohsuke.stapler.DataBoundConstructor;
 /**
  * Publishes the results of the JSLINT analysis  (maven 2 project type).
  *
- * @author Ulli Hafner
+ * @author Joe Heth
  */
 public class JslintReporter extends HealthAwareMavenReporter {
-    /** Unique identifier of this class. */
-    private static final long serialVersionUID = 2272875032054063496L;
+
     /** Default JSLINT pattern. */
     private static final String JSLINT_XML_FILE = "jslint.xml";
+
     /** Ant file-set pattern of files to work with. */
     @SuppressWarnings("unused")
     private String pattern; // obsolete since release 2.5
+
     /**
      * Creates a new instance of <code>JslintReporter</code>.
      *

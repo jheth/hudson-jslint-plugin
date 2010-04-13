@@ -6,11 +6,10 @@ import hudson.plugins.analysis.core.ResultAction;
 /**
  * Represents the aggregated results of the JSLint analysis in m2 jobs.
  *
- * @author Ulli Hafner
+ * @author Joe Heth
  */
 public class JslintMavenResult extends JslintResult {
-    /** Unique ID of this class. */
-    private static final long serialVersionUID = -4913938782537266259L;
+
     /**
      * Creates a new instance of {@link JslintMavenResult}.
      *
@@ -25,6 +24,7 @@ public class JslintMavenResult extends JslintResult {
             final ParserResult result) {
         super(build, defaultEncoding, result);
     }
+
     /**
      * Returns the actual type of the associated result action.
      *

@@ -13,7 +13,7 @@ import org.apache.commons.lang.StringUtils;
 /**
  * Provides access to rule descriptions and examples.
  *
- * @author Ulli Hafner
+ * @author Joe Heth
  */
 public final class JslintMessages {
 

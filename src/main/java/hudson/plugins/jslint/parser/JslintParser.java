@@ -19,11 +19,9 @@ import org.xml.sax.SAXException;
 /**
  * A parser for Jslint XML files.
  *
- * @author Ulli Hafner
+ * @author Joe Heth
  */
 public class JslintParser extends AbstractAnnotationParser {
-    /** Unique identifier of this class. */
-    private static final long serialVersionUID = -8705621875291182458L;
 
     /**
      * Creates a new instance of {@link JslintParser}.

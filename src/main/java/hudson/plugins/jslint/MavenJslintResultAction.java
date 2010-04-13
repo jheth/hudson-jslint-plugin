@@ -15,13 +15,13 @@ import java.util.Map;
  * additionally provides result aggregation for sub-modules and for the main
  * project.
  *
- * @author Ulli Hafner
+ * @author Joe Heth
  */
 public class MavenJslintResultAction extends JslintResultAction implements AggregatableAction, MavenAggregatedReport {
-    /** Unique identifier of this class. */
-    private static final long serialVersionUID = 1273798369273225973L;
+
     /** The default encoding to be used when reading and parsing files. */
     private final String defaultEncoding;
+
     /**
      * Creates a new instance of <code>MavenJslintResultAction</code>.
      *

@@ -8,9 +8,10 @@ import java.util.List;
 /**
  * Java Bean class for a errors collection of the Jslint format.
  *
- * @author Ulli Hafner
+ * @author Joe Heth
  */
 public class Jslint {
+
     /** All files of this violations collection. */
     private final List<File> files = new ArrayList<File>();
 
