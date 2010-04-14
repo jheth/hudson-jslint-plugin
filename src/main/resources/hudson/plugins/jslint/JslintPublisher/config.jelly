@@ -1,13 +1,13 @@
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define"
 	xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:u="/util">
-  <f:entry title="${%PMD results}"
+  <f:entry title="${%JSLint results}"
 	description="${%description.pattern}">
 	<f:textbox name="pattern" value="${instance.pattern}"
-		checkUrl="'descriptorByName/PmdPublisher/checkPattern?value='+escape(this.value)" />
+		checkUrl="'descriptorByName/JslintPublisher/checkPattern?value='+escape(this.value)" />
   </f:entry>
   <f:advanced>
-    <u:thresholds id="pmd"/>
-    <u:defaultEncoding id="pmd"/>
-    <u:trend id="pmd"/>
+    <u:thresholds id="jslint"/>
+    <u:defaultEncoding id="jslint"/>
+    <u:trend id="jslint"/>
   </f:advanced>
 </j:jelly>

@@ -1,8 +1,4 @@
-<!--
-  This view is used to render the plugin list page.
-
-  Since we don't really have anything dynamic here, let's just use static HTML. 
--->
 <div>
-  This plugin is a sample plugin to explain how to write a Hudson plugin.
+  This plug-in collects the <a href="http://www.jslint.com/">JSLint</a> analysis
+  results of the project modules and visualizes the found issues.
 </div>
