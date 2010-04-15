@@ -12,9 +12,6 @@ import hudson.plugins.analysis.core.AbstractProjectAction;
  */
 public class JslintProjectAction extends AbstractProjectAction {
 
-	/** Unique identifier of this class. */
-	private static final long serialVersionUID = -654316122223480561L;
-
 	/**
 	 * Instantiates a new find bugs project action.
 	 *

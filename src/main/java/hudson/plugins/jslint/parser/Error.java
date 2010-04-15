@@ -8,68 +8,68 @@ package hudson.plugins.jslint.parser;
 public class Error {
 
 // CHECKSTYLE:OFF
-    /** Source of warning. */
-    private String source;
-    /** Priority of warning. */
-    private String severity;
-    /** Message of warning. */
-    private String message;
-    /** The first line of the warning range. */
+    /** Character offset of warning. */
+    private String character;
+    /** Evidence of the warning. */
+    private String evidence;
+    /** Line of the warning. */
     private int line;
+    /** Reason for the warning. */
+    private String reason;
 // CHECKSTYLE:ON
 
     /**
-     * Returns the source.
+     * Returns the character.
      *
-     * @return the source
+     * @return the character
      */
-    public String getSource() {
-        return source;
+    public String getChar() {
+        return character;
     }
 
     /**
-     * Sets the source to the specified value.
+     * Sets the character to the specified value.
      *
-     * @param source the value to set
+     * @param character the value to set
      */
-    public void setSource(final String source) {
-        this.source = source;
+    public void setChar(final String character) {
+        this.character = character;
     }
 
     /**
-     * Returns the severity.
+     * Returns the evidence.
      *
-     * @return the severity
+     * @return the evidence
      */
-    public String getSeverity() {
-        return severity;
+    public String getEvidence() {
+        return evidence;
     }
 
     /**
-     * Sets the severity to the specified value.
+     * Sets the evidence to the specified value.
      *
-     * @param severity the value to set
+     * @param evidence the value to set
      */
-    public void setSeverity(final String severity) {
-        this.severity = severity;
+    public void setEvidence(final String evidence) {
+        this.evidence = evidence;
     }
 
     /**
-     * Returns the message.
+     * Returns the reason.
      *
-     * @return the message
+     * @return the reason
      */
-    public String getMessage() {
-        return message;
+    public String getReason() {
+        return reason;
     }
 
     /**
-     * Sets the message to the specified value.
+     * Sets the reason to the specified value.
      *
-     * @param message the value to set
+     * @param reason the value to set
      */
-    public void setMessage(final String message) {
-        this.message = message;
+    public void setReason(final String reason) {
+        this.reason = reason;
     }
 
     /**

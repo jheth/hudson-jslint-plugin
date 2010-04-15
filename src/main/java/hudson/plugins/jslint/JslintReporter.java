@@ -22,13 +22,13 @@ import org.kohsuke.stapler.DataBoundConstructor;
  */
 public class JslintReporter extends HealthAwareMavenReporter {
 
+    /** Unique identifier of this class. */
+    private static final long serialVersionUID = -5592892163830467313L;
+
     /** Default JSLINT pattern. */
     private static final String JSLINT_XML_FILE = "jslint.xml";
 
-    /** Ant file-set pattern of files to work with. */
-    @SuppressWarnings("unused")
-    private String pattern; // obsolete since release 2.5
-
+    
     /**
      * Creates a new instance of <code>JslintReporter</code>.
      *

@@ -10,6 +10,9 @@ import hudson.plugins.analysis.core.ResultAction;
  */
 public class JslintMavenResult extends JslintResult {
 
+    /** Unique identifier of this class. */
+    private static final long serialVersionUID = -6421672073092116859L;
+
     /**
      * Creates a new instance of {@link JslintMavenResult}.
      *

@@ -6,13 +6,16 @@ import hudson.plugins.analysis.util.model.AnnotationProvider;
 import org.jvnet.localizer.Localizable;
 
 /**
- * A health descriptor fori JSLint build results.
+ * A health descriptor for JSLint build results.
  *
  * @author Joe Heth
  */
 public class JslintHealthDescriptor extends AbstractHealthDescriptor {
 
-    /**
+	/** Unique identifier of this class. */
+	private static final long serialVersionUID = -798546439498932178L;
+
+	/**
      * Creates a new instance of {@link JslintHealthDescriptor} based on the
      * values of the specified descriptor.
      *

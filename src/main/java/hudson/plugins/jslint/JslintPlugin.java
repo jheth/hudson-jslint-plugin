@@ -1,4 +1,4 @@
-package hudson.plugings.jslint;
+package hudson.plugins.jslint;
 
 import hudson.Plugin;
 import hudson.plugins.jslint.parser.JslintMessages;

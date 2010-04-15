@@ -16,7 +16,10 @@ import com.thoughtworks.xstream.XStream;
  */
 public class JslintResult extends BuildResult {
 
-    /**
+	/** Unique identifier of this class. */
+	private static final long serialVersionUID = 2574964823228881345L;
+
+	/**
      * Creates a new instance of {@link JslintResult}.
      *
      * @param build
@@ -51,7 +54,7 @@ public class JslintResult extends BuildResult {
     /** {@inheritDoc} */
     @Override
     protected void configure(final XStream xstream) {
-        xstream.alias("bug", Warning.class);
+        xstream.alias("warning", Warning.class);
     }
 
     /**

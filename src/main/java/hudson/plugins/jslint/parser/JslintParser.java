@@ -1,7 +1,6 @@
 package hudson.plugins.jslint.parser;
 
 import hudson.plugins.analysis.core.AbstractAnnotationParser;
-import hudson.plugins.analysis.util.JavaPackageDetector;
 import hudson.plugins.analysis.util.model.FileAnnotation;
 import hudson.plugins.analysis.util.model.Priority;
 
@@ -22,6 +21,9 @@ import org.xml.sax.SAXException;
  * @author Joe Heth
  */
 public class JslintParser extends AbstractAnnotationParser {
+
+    /** Unique identifier of this class. */
+    private static final long serialVersionUID = -8241518103009170526L;
 
     /**
      * Creates a new instance of {@link JslintParser}.
@@ -57,7 +59,7 @@ public class JslintParser extends AbstractAnnotationParser {
             digester.addSetProperties(fileXPath);
             digester.addSetNext(fileXPath, "addFile", hudson.plugins.jslint.parser.File.class.getName());
 
-            String bugXPath = "jslint/file/error";
+            String bugXPath = "jslint/file/issue";
             digester.addObjectCreate(bugXPath, Error.class);
             digester.addSetProperties(bugXPath);
             digester.addSetNext(bugXPath, "addError", Error.class.getName());
@@ -90,55 +92,32 @@ public class JslintParser extends AbstractAnnotationParser {
     private Collection<FileAnnotation> convert(final Jslint collection, final String moduleName) {
         ArrayList<FileAnnotation> annotations = new ArrayList<FileAnnotation>();
 
-        for (hudson.plugins.jslint.parser.File file : collection.getFiles()) {
-            if (isValidWarning(file)) {
-                String packageName = new JavaPackageDetector().detectPackageName(file.getName());
-                for (Error error : file.getErrors()) {
-                    Priority priority;
-                    if ("error".equalsIgnoreCase(error.getSeverity())) {
-                        priority = Priority.HIGH;
-                    }
-                    else if ("warning".equalsIgnoreCase(error.getSeverity())) {
-                        priority = Priority.NORMAL;
-                    }
-                    else if ("info".equalsIgnoreCase(error.getSeverity())) {
-                        priority = Priority.LOW;
-                    }
-                    else {
-                        continue; // ignore
-                    }
-                    String source = error.getSource();
-                    String type = StringUtils.substringAfterLast(source, ".");
-                    String category = StringUtils.substringAfterLast(StringUtils.substringBeforeLast(source, "."), ".");
+        for (hudson.plugins.jslint.parser.File file : collection.getFiles()) {                
+            for (Error error : file.getErrors()) {
 
-                    Warning warning = new Warning(priority, error.getMessage(), StringUtils.capitalize(category),
-                            type, error.getLine(), error.getLine());
-                    warning.setModuleName(moduleName);
-                    warning.setFileName(file.getName());
-                    warning.setPackageName(packageName);
+            	//String source = error.getSource();
+                //String type = StringUtils.substringAfterLast(source, ".");
+                //String category = StringUtils.substringAfterLast(StringUtils.substringBeforeLast(source, "."), ".");
+            	
+            	String type = "JSLint";
+            	String category = "Test Category";
+            	
+                Warning warning = new Warning(Priority.NORMAL, error.getReason(), StringUtils.capitalize(category),
+                        type, error.getLine(), error.getLine());
+                warning.setModuleName(moduleName);
+                warning.setFileName(file.getName());
 
-                    try {
-                        warning.setContextHashCode(createContextHashCode(file.getName(), error.getLine()));
-                    }
-                    catch (IOException exception) {
-                        // ignore and continue
-                    }
-                    annotations.add(warning);
+                try {
+                    warning.setContextHashCode(createContextHashCode(file.getName(), error.getLine()));
                 }
+                catch (IOException exception) {
+                    // ignore and continue
+                }
+                annotations.add(warning);
             }
         }
         return annotations;
     }
 
-    /**
-     * Returns <code>true</code> if this warning is valid or <code>false</code>
-     * if the warning can't be processed by the jslint plug-in.
-     *
-     * @param file the file to check
-     * @return <code>true</code> if this warning is valid
-     */
-    private boolean isValidWarning(final hudson.plugins.jslint.parser.File file) {
-        return !file.getName().endsWith("package.html");
-    }
 }
 

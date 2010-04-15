@@ -61,13 +61,8 @@ public class Warning extends AbstractAnnotation {
 
     /** {@inheritDoc} */
     public String getToolTip() {
-        return ""; //CheckStyleRules.getInstance().getDescription(getType());
+        return "my tooltip"; //JslintMessages.getInstance().getDescription(getType()); 
     }
 
-    /** Not used anymore. @deprecated */
-    @SuppressWarnings("all")
-    @edu.umd.cs.findbugs.annotations.SuppressWarnings("")
-    @Deprecated
-    private final transient String tooltip = StringUtils.EMPTY; // backward compatibility NOPMD
 }
 

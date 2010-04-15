@@ -15,7 +15,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void test0WarningsIn0File() {
-        checkSummaryText(0, 0, "Checkstyle: 0 warnings from 0 Checkstyle files.");
+        checkSummaryText(0, 0, "JSLINT: 0 warnings from 0 JSLint files.");
     }
 
     /**
@@ -23,7 +23,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void test0WarningsIn1File() {
-        checkSummaryText(0, 1, "Checkstyle: 0 warnings from one Checkstyle file.");
+        checkSummaryText(0, 1, "JSLINT: 0 warnings from one JSLint file.");
     }
 
     /**
@@ -31,7 +31,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void test0WarningsIn5Files() {
-        checkSummaryText(0, 5, "Checkstyle: 0 warnings from 5 Checkstyle files.");
+        checkSummaryText(0, 5, "JSLINT: 0 warnings from 5 JSLint files.");
     }
 
     /**
@@ -39,7 +39,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void test1WarningIn2Files() {
-        checkSummaryText(1, 2, "Checkstyle: <a href=\"checkstyleResult\">1 warning</a> from 2 Checkstyle files.");
+        checkSummaryText(1, 2, "JSLINT: <a href=\"jslintResult\">1 warning</a> from 2 JSLint files.");
     }
 
     /**
@@ -47,7 +47,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void test5WarningsIn1File() {
-        checkSummaryText(5, 1, "Checkstyle: <a href=\"checkstyleResult\">5 warnings</a> from one Checkstyle file.");
+        checkSummaryText(5, 1, "JSLINT: <a href=\"jslintResult\">5 warnings</a> from one JSLint file.");
     }
 
     /**
@@ -82,7 +82,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void testOnly1New() {
-        checkDeltaText(0, 1, "<li><a href=\"checkstyleResult/new\">1 new warning</a></li>");
+        checkDeltaText(0, 1, "<li><a href=\"jslintResult/new\">1 new warning</a></li>");
     }
 
     /**
@@ -90,7 +90,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void testOnly5New() {
-        checkDeltaText(0, 5, "<li><a href=\"checkstyleResult/new\">5 new warnings</a></li>");
+        checkDeltaText(0, 5, "<li><a href=\"jslintResult/new\">5 new warnings</a></li>");
     }
 
     /**
@@ -98,7 +98,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void testOnly1Fixed() {
-        checkDeltaText(1, 0, "<li><a href=\"checkstyleResult/fixed\">1 fixed warning</a></li>");
+        checkDeltaText(1, 0, "<li><a href=\"jslintResult/fixed\">1 fixed warning</a></li>");
     }
 
     /**
@@ -106,7 +106,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void testOnly5Fixed() {
-        checkDeltaText(5, 0, "<li><a href=\"checkstyleResult/fixed\">5 fixed warnings</a></li>");
+        checkDeltaText(5, 0, "<li><a href=\"jslintResult/fixed\">5 fixed warnings</a></li>");
     }
 
     /**
@@ -115,8 +115,8 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
     @Test
     public void test5New5Fixed() {
         checkDeltaText(5, 5,
-                "<li><a href=\"checkstyleResult/new\">5 new warnings</a></li>"
-                + "<li><a href=\"checkstyleResult/fixed\">5 fixed warnings</a></li>");
+                "<li><a href=\"jslintResult/new\">5 new warnings</a></li>"
+                + "<li><a href=\"jslintResult/fixed\">5 fixed warnings</a></li>");
     }
 
     /**
@@ -125,8 +125,8 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
     @Test
     public void test5New1Fixed() {
         checkDeltaText(1, 5,
-        "<li><a href=\"checkstyleResult/new\">5 new warnings</a></li>"
-        + "<li><a href=\"checkstyleResult/fixed\">1 fixed warning</a></li>");
+        "<li><a href=\"jslintResult/new\">5 new warnings</a></li>"
+        + "<li><a href=\"jslintResult/fixed\">1 fixed warning</a></li>");
     }
 
     /**
@@ -135,8 +135,8 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
     @Test
     public void test1New5Fixed() {
         checkDeltaText(5, 1,
-                "<li><a href=\"checkstyleResult/new\">1 new warning</a></li>"
-                + "<li><a href=\"checkstyleResult/fixed\">5 fixed warnings</a></li>");
+                "<li><a href=\"jslintResult/new\">1 new warning</a></li>"
+                + "<li><a href=\"jslintResult/fixed\">5 fixed warnings</a></li>");
     }
 
     /**
@@ -145,8 +145,8 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
     @Test
     public void test1New1Fixed() {
         checkDeltaText(1, 1,
-                "<li><a href=\"checkstyleResult/new\">1 new warning</a></li>"
-                + "<li><a href=\"checkstyleResult/fixed\">1 fixed warning</a></li>");
+                "<li><a href=\"jslintResult/new\">1 new warning</a></li>"
+                + "<li><a href=\"jslintResult/fixed\">1 fixed warning</a></li>");
     }
 
     /**

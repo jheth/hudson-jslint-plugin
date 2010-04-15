@@ -3,10 +3,12 @@ package hudson.plugins.jslint;
 import hudson.Extension;
 import hudson.plugins.analysis.core.PluginDescriptor;
 
-@Extension(ordinal = 200)
+@Extension(ordinal = 100)
 public final class JslintDescriptor extends PluginDescriptor {
+
 	/** Plugin-in name */
-	private static final String PLUGIN_NAME = "jslint";
+	private static final String PLUGIN_NAME = "JSLint";
+
 	/** Icon to use for the result and project action */
 	private static final String ACTION_ICON = "/plugin/jslint/icons/jslint-24x24.gif";
 

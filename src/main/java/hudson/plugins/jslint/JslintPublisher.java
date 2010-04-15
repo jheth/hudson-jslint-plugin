@@ -19,6 +19,9 @@ import org.kohsuke.stapler.DataBoundConstructor;
  */
 public class JslintPublisher extends HealthAwarePublisher {
 
+    /** Unique identifier of this class. */
+    private static final long serialVersionUID = -7734637404658050468L;
+
     /** Default JSLint pattern. */
     private static final String DEFAULT_PATTERN = "**/jslint.xml";
 
