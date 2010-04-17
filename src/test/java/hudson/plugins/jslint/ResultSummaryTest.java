@@ -15,7 +15,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void test0WarningsIn0File() {
-        checkSummaryText(0, 0, "JSLINT: 0 warnings from 0 JSLint files.");
+        checkSummaryText(0, 0, "JSLint: 0 warnings from 0 JSLint files.");
     }
 
     /**
@@ -23,7 +23,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void test0WarningsIn1File() {
-        checkSummaryText(0, 1, "JSLINT: 0 warnings from one JSLint file.");
+        checkSummaryText(0, 1, "JSLint: 0 warnings from one JSLint file.");
     }
 
     /**
@@ -31,7 +31,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void test0WarningsIn5Files() {
-        checkSummaryText(0, 5, "JSLINT: 0 warnings from 5 JSLint files.");
+        checkSummaryText(0, 5, "JSLint: 0 warnings from 5 JSLint files.");
     }
 
     /**
@@ -39,7 +39,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void test1WarningIn2Files() {
-        checkSummaryText(1, 2, "JSLINT: <a href=\"jslintResult\">1 warning</a> from 2 JSLint files.");
+        checkSummaryText(1, 2, "JSLint: <a href=\"jslintResult\">1 warning</a> from 2 JSLint files.");
     }
 
     /**
@@ -47,7 +47,7 @@ public class ResultSummaryTest extends AbstractEnglishLocaleTest {
      */
     @Test
     public void test5WarningsIn1File() {
-        checkSummaryText(5, 1, "JSLINT: <a href=\"jslintResult\">5 warnings</a> from one JSLint file.");
+        checkSummaryText(5, 1, "JSLint: <a href=\"jslintResult\">5 warnings</a> from one JSLint file.");
     }
 
     /**

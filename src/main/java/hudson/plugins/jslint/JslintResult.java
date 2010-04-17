@@ -80,7 +80,7 @@ public class JslintResult extends BuildResult {
 
     /** {@inheritDoc} */
     public String getDisplayName() {
-        return Messages.JSLINT_ProjectAction_Name();
+        return Messages.JSLint_ProjectAction_Name();
     }
 
     /**

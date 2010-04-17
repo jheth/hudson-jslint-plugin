@@ -2,7 +2,6 @@ package hudson.plugins.jslint.parser;
 
 import hudson.plugins.analysis.util.model.AbstractAnnotation;
 import hudson.plugins.analysis.util.model.Priority;
-//import hudson.plugins.jslint.rules.CheckStyleRules;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -61,7 +60,7 @@ public class Warning extends AbstractAnnotation {
 
     /** {@inheritDoc} */
     public String getToolTip() {
-        return "my tooltip"; //JslintMessages.getInstance().getDescription(getType()); 
+        return ""; //JslintMessages.getInstance().getDescription(getType()); 
     }
 
 }

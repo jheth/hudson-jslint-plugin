@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jslint>
+  <file name="/path/to/js/file1.js">
+    <issue char="25" evidence="	initialize: function(selectedList, options) {" line="24" reason="Missing space after &apos;function&apos;." />
+    <issue char="10" evidence="		}" line="29" reason="Missing semicolon." />
+    <issue char="28" evidence="	delegateClick: function(e) {" line="36" reason="Missing space after &apos;function&apos;." />
+    <issue char="40" evidence="					onSuccess: function(response){" line="120" reason="Missing space after &apos;function&apos;." />
+    <issue char="50" evidence="					onSuccess: function(response){" line="120" reason="Missing space after &apos;)&apos;." />
+  </file>
+  <file name="/path/to/js/test2.js">
+    <issue char="27" evidence="	show_report : function() {" line="4" reason="Missing space after &apos;function&apos;." />
+  </file>
+</jslint>

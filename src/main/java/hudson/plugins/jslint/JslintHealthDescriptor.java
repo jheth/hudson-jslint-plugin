@@ -30,13 +30,13 @@ public class JslintHealthDescriptor extends AbstractHealthDescriptor {
     protected Localizable createDescription(final AnnotationProvider result) {
 
         if (result.getNumberOfAnnotations() == 0) {
-            return Messages._JSLINT_ResultAction_HealthReportNoItem();
+            return Messages._JSLint_ResultAction_HealthReportNoItem();
         }
         else if (result.getNumberOfAnnotations() == 1) {
-            return Messages._JSLINT_ResultAction_HealthReportSingleItem();
+            return Messages._JSLint_ResultAction_HealthReportSingleItem();
         }
         else {
-            return Messages._JSLINT_ResultAction_HealthReportMultipleItem(result.getNumberOfAnnotations());
+            return Messages._JSLint_ResultAction_HealthReportMultipleItem(result.getNumberOfAnnotations());
         }
     }
 }

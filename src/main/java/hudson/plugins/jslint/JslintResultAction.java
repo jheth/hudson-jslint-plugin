@@ -46,7 +46,7 @@ public class JslintResultAction extends AbstractResultAction<JslintResult> {
 
     /** {@inheritDoc} */
     public String getDisplayName() {
-        return Messages.JSLINT_ProjectAction_Name();
+        return Messages.JSLint_ProjectAction_Name();
     }
 
     /** {@inheritDoc} */
@@ -58,13 +58,13 @@ public class JslintResultAction extends AbstractResultAction<JslintResult> {
     /** {@inheritDoc} */
     @Override
     public String getMultipleItemsTooltip(final int numberOfItems) {
-        return Messages.JSLINT_ResultAction_MultipleWarnings(numberOfItems);
+        return Messages.JSLint_ResultAction_MultipleWarnings(numberOfItems);
     }
 
     /** {@inheritDoc} */
     @Override
     public String getSingleItemTooltip() {
-        return Messages.JSLINT_ResultAction_OneWarning();
+        return Messages.JSLint_ResultAction_OneWarning();
     }
 
 }

@@ -24,13 +24,13 @@ public class JslintProjectAction extends AbstractProjectAction {
 
 	/** {@inheritDoc} */
 	public String getDisplayName() {
-		return Messages.JSLINT_ProjectAction_Name();
+		return Messages.JSLint_ProjectAction_Name();
 	}
 
 	/** {@inheritDoc} */
 	@Override
 	public String getTrendName() {
-		return Messages.JSLINT_Trend_Name();
+		return Messages.JSLint_Trend_Name();
 	}
 }
 

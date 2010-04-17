@@ -9,7 +9,7 @@ public class Error {
 
 // CHECKSTYLE:OFF
     /** Character offset of warning. */
-    private String character;
+    private int character;
     /** Evidence of the warning. */
     private String evidence;
     /** Line of the warning. */
@@ -23,7 +23,7 @@ public class Error {
      *
      * @return the character
      */
-    public String getChar() {
+    public int getChar() {
         return character;
     }
 
@@ -32,7 +32,7 @@ public class Error {
      *
      * @param character the value to set
      */
-    public void setChar(final String character) {
+    public void setChar(final int character) {
         this.character = character;
     }
 

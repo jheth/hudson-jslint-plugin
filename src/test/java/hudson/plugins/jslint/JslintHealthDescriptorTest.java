@@ -26,15 +26,15 @@ public class JslintHealthDescriptorTest extends AbstractHealthDescriptorTest {
         JslintHealthDescriptor healthDescriptor = new JslintHealthDescriptor(NullHealthDescriptor.NULL_HEALTH_DESCRIPTOR);
 
         Localizable description = healthDescriptor.createDescription(provider);
-        assertEquals(WRONG_DESCRIPTION, Messages.JSLINT_ResultAction_HealthReportNoItem(), description.toString());
+        assertEquals(WRONG_DESCRIPTION, Messages.JSLint_ResultAction_HealthReportNoItem(), description.toString());
 
         when(provider.getNumberOfAnnotations()).thenReturn(1);
         description = healthDescriptor.createDescription(provider);
-        assertEquals(WRONG_DESCRIPTION, Messages.JSLINT_ResultAction_HealthReportSingleItem(), description.toString());
+        assertEquals(WRONG_DESCRIPTION, Messages.JSLint_ResultAction_HealthReportSingleItem(), description.toString());
 
         when(provider.getNumberOfAnnotations()).thenReturn(2);
         description = healthDescriptor.createDescription(provider);
-        assertEquals(WRONG_DESCRIPTION, Messages.JSLINT_ResultAction_HealthReportMultipleItem(2), description.toString());
+        assertEquals(WRONG_DESCRIPTION, Messages.JSLint_ResultAction_HealthReportMultipleItem(2), description.toString());
     }
 
     /** {@inheritDoc} */

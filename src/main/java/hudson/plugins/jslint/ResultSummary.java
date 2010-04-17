@@ -17,25 +17,25 @@ public final class ResultSummary {
     public static String createSummary(final JslintResult result) {
         StringBuilder summary = new StringBuilder();
         int bugs = result.getNumberOfAnnotations();
-        summary.append("JSLINT: ");
+        summary.append("JSLint: ");
         if (bugs > 0) {
             summary.append("<a href=\"jslintResult\">");
         }
         if (bugs == 1) {
-            summary.append(Messages.JSLINT_ResultAction_OneWarning());
+            summary.append(Messages.JSLint_ResultAction_OneWarning());
         }
         else {
-            summary.append(Messages.JSLINT_ResultAction_MultipleWarnings(bugs));
+            summary.append(Messages.JSLint_ResultAction_MultipleWarnings(bugs));
         }
         if (bugs > 0) {
             summary.append("</a>");
         }
         summary.append(" ");
         if (result.getNumberOfModules() == 1) {
-            summary.append(Messages.JSLINT_ResultAction_OneFile());
+            summary.append(Messages.JSLint_ResultAction_OneFile());
         }
         else {
-            summary.append(Messages.JSLINT_ResultAction_MultipleFiles(result.getNumberOfModules()));
+            summary.append(Messages.JSLint_ResultAction_MultipleFiles(result.getNumberOfModules()));
         }
         return summary.toString();
     }
@@ -51,20 +51,20 @@ public final class ResultSummary {
         if (result.getNumberOfNewWarnings() > 0) {
             summary.append("<li><a href=\"jslintResult/new\">");
             if (result.getNumberOfNewWarnings() == 1) {
-                summary.append(Messages.JSLINT_ResultAction_OneNewWarning());
+                summary.append(Messages.JSLint_ResultAction_OneNewWarning());
             }
             else {
-                summary.append(Messages.JSLINT_ResultAction_MultipleNewWarnings(result.getNumberOfNewWarnings()));
+                summary.append(Messages.JSLint_ResultAction_MultipleNewWarnings(result.getNumberOfNewWarnings()));
             }
             summary.append("</a></li>");
         }
         if (result.getNumberOfFixedWarnings() > 0) {
             summary.append("<li><a href=\"jslintResult/fixed\">");
             if (result.getNumberOfFixedWarnings() == 1) {
-                summary.append(Messages.JSLINT_ResultAction_OneFixedWarning());
+                summary.append(Messages.JSLint_ResultAction_OneFixedWarning());
             }
             else {
-                summary.append(Messages.JSLINT_ResultAction_MultipleFixedWarnings(result.getNumberOfFixedWarnings()));
+                summary.append(Messages.JSLint_ResultAction_MultipleFixedWarnings(result.getNumberOfFixedWarnings()));
             }
             summary.append("</a></li>");
         }

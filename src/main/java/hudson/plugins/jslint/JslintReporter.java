@@ -16,7 +16,7 @@ import org.apache.maven.project.MavenProject;
 import org.kohsuke.stapler.DataBoundConstructor;
 
 /**
- * Publishes the results of the JSLINT analysis  (maven 2 project type).
+ * Publishes the results of the JSLint analysis  (maven 2 project type).
  *
  * @author Joe Heth
  */
@@ -25,7 +25,7 @@ public class JslintReporter extends HealthAwareMavenReporter {
     /** Unique identifier of this class. */
     private static final long serialVersionUID = -5592892163830467313L;
 
-    /** Default JSLINT pattern. */
+    /** Default JSLint pattern. */
     private static final String JSLINT_XML_FILE = "jslint.xml";
 
     
@@ -55,15 +55,15 @@ public class JslintReporter extends HealthAwareMavenReporter {
      *            evaluating the build stability and health
      */
     // CHECKSTYLE:OFF
-    @SuppressWarnings("JSLINT.ExcessiveParameterList")
     @DataBoundConstructor
     public JslintReporter(final String threshold, final String newThreshold,
             final String failureThreshold, final String newFailureThreshold,
             final String healthy, final String unHealthy, final String thresholdLimit) {
         super(threshold, newThreshold, failureThreshold, newFailureThreshold,
-                healthy, unHealthy, thresholdLimit, "JSLINT");
+                healthy, unHealthy, thresholdLimit, "JSLint");
     }
     // CHECKSTYLE:ON
+
     /** {@inheritDoc} */
     @Override
     protected boolean acceptGoal(final String goal) {

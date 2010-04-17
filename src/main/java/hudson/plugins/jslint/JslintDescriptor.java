@@ -7,17 +7,17 @@ import hudson.plugins.analysis.core.PluginDescriptor;
 public final class JslintDescriptor extends PluginDescriptor {
 
 	/** Plugin-in name */
-	private static final String PLUGIN_NAME = "JSLint";
+	private static final String PLUGIN_NAME = "jslint";
 
 	/** Icon to use for the result and project action */
-	private static final String ACTION_ICON = "/plugin/jslint/icons/jslint-24x24.gif";
+	private static final String ACTION_ICON = "/plugin/jslint/icons/jslint-24x24.png";
 
 	public JslintDescriptor() {
 		super(JslintPublisher.class);
 	}
 
 	public String getDisplayName() {
-		return Messages.JSLINT_Publisher_Name();
+		return Messages.JSLint_Publisher_Name();
 	}
 
 	public String getPluginName() {
