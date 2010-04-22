@@ -18,6 +18,9 @@ public class Warning extends AbstractAnnotation {
     /** Origin of the annotation. */
     public static final String ORIGIN = "jslint";
 
+    private int character;
+    private String evidence;
+    
     /**
      * Creates a new instance of {@link Warning}.
      *
@@ -60,8 +63,27 @@ public class Warning extends AbstractAnnotation {
 
     /** {@inheritDoc} */
     public String getToolTip() {
-        return ""; //JslintMessages.getInstance().getDescription(getType()); 
+        return "Char: " + this.character + "; Evidence: " + this.evidence.trim(); 
     }
 
+    public int getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(int character) {
+        this.character = character;
+    }
+
+    public String getEvidence() {
+        return evidence;
+    }
+
+    public void setEvidence(String evidence) {
+        if (evidence == null) {
+            evidence = "";
+         }
+         this.evidence = evidence;
+    }
+    
 }
 

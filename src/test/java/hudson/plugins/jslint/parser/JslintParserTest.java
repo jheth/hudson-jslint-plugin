@@ -51,10 +51,11 @@ public class JslintParserTest {
             Warning warning = (Warning)annotation;
             assertEquals("Wrong number of line ranges detected.", 1, warning.getLineRanges().size());
             if (warning.getPrimaryLineNumber() == 24) {
-                assertEquals("Wrong category detected.", "Test Category", warning.getCategory());
-                assertEquals("Wrong type detected.", "JSLint", warning.getType());
+                assertEquals("Wrong category detected.", "", warning.getCategory());
+                assertEquals("Wrong type detected.", "White Space", warning.getType());
                 assertEquals("Wrong priority detected.", Priority.NORMAL, warning.getPriority());
-                assertEquals("Wrong description detected.", "", warning.getToolTip());
+                assertEquals("Wrong description detected.", 
+                	"Char: 25; Evidence: initialize: function(selectedList, options) {", warning.getToolTip());
                 assertEquals("Wrong message detected.",
                         "Missing space after 'function'.", warning.getMessage());
                 hasChecked = true;

@@ -41,4 +41,15 @@
       <url>http://maven.glassfish.org/content/groups/public/</url>
     </pluginRepository>
   </pluginRepositories>
+
+  <developers>
+    <developer>
+      <id>jheth</id>
+      <name>Joe Heth</name>
+      <email>joeheth@yahoo.com</email>
+    </developer>
+  </developers>
+
+  <url>http://wiki.hudson-ci.org/display/HUDSON/JSLint+Plugin</url>
+
 </project>

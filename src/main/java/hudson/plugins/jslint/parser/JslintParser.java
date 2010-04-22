@@ -95,17 +95,15 @@ public class JslintParser extends AbstractAnnotationParser {
         for (hudson.plugins.jslint.parser.File file : collection.getFiles()) {                
             for (Error error : file.getErrors()) {
 
-            	//String source = error.getSource();
-                //String type = StringUtils.substringAfterLast(source, ".");
-                //String category = StringUtils.substringAfterLast(StringUtils.substringBeforeLast(source, "."), ".");
-            	
-            	String type = "JSLint";
-            	String category = "Test Category";
+                String type = JslintMessages.getInstance().getType(error.getReason());
+                String category = "";
             	
                 Warning warning = new Warning(Priority.NORMAL, error.getReason(), StringUtils.capitalize(category),
                         type, error.getLine(), error.getLine());
                 warning.setModuleName(moduleName);
                 warning.setFileName(file.getName());
+                warning.setCharacter(error.getChar());
+                warning.setEvidence(error.getEvidence());
 
                 try {
                     warning.setContextHashCode(createContextHashCode(file.getName(), error.getLine()));
